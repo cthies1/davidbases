@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Databases First Web Page</title>
+        <meta name="description" content="This is our first webpage for cs455_db." />
+        <meta name="author" content="Chloe, Bee, Anna, Diggy" />
+        <link rel="stylesheet" href="./assets/css/styles.css" />
+    </head>
+    <body>
+        <h1>Databases First Web Page</h1>
+
+        <h3>Team Members:</h3>
+        <ul>
+            <li>Chloe Thies</li>
+            <li>Bee Bridge</li>
+            <li>Anna Van Boven</li>
+            <li>Diggy Dolan</li>
+        </ul>
+
+        <img class="drake-meme" alt="Databases v Davidbases" src="./assets/images/davidbases.png" />
+
+        <h3>Web Server Questions:</h3>
+        <ol>
+            <li><b><i>What command can you type into your server’s terminal to check if apache is currently running?</i></b></li>
+            <ul><li><b>Answer:</b> sudo systemctl status apache2 </li></ul>
+            <li><b><i>Apache implements the HTTP protocol. The protocol is extremely simple, with just a few commands. What is the difference between the GET, POST, and HEAD commands?</i></b></li>
+            <ul><li><b>Answer:</b> The GET method requests a representation of the specified resource. </br> The POST method is used to submit an entity to the specified resource, often causing a change in state or side effects on the server. </br> The HEAD method asks for a response identical to that of a GET request, but without the response body. </li></ul>
+            <li><b><i>What is the difference between ServerRoot and DocumentRoot?</i></b></li>
+            <ul><li><b>Answer:</b> ServerRoot: The top of the directory tree under which the server's conjfiguration, error, and log files are kept. </br> DocumentRoot: The top-level directory in the document tree visible from the web and this directive sets the directory in the configuration from which Apache2 or HTTPD looks for and serves web files from the requested URL to the document root. </li></ul>
+            <li><b><i>What port does apache listen to for HTTP connections from browsers by default? Test it out by typing this into your browser: http://ip_addr:port, where ip_addr is the IP address of your server, and port is the port number given in the configuration file. Try changing the port number to something else. Test it again in your browser, then change it back. The fact that you don’t usually need to specify the port when going to a URL should tell you that the default port to access web servers is the one given in the config file.</i></b></li>
+            <ul><li><b>Answer:</b> Default port: 80 </br> When we changed the port to a different number and restarted apache, the only port that worked was the one that we changed it to. </li></ul>
+            <li><b><i>What file on your server contains apache’s traffic logs? What about apache’s error logs? These files tend to get very long, with the most recent logged events being appended to the end of the file. On the terminal, how can you view the last few lines of any file?</i></b></li>
+            <ul><li><b>Answer:</b> Traffic logs: access.log </br> Error logs: error.log </br> To view the last few lines, we can use the sudo tail command. </li></ul>
+            <li><b><i>What is a Directory Index file? Why would it be desirable to have one in each directory?</i></b></li>
+            <ul><li><b>Answer:</b> A Directory Index file is a file you can save that is the default file to open when a directory is accessed. The index file is a list of all other files in the directory. Without a specified directory index, the page will automatically take the user to .../index.html. You can specify which file it takes the user to. </li></ul>
+            <li><b><i>When the browser tries to access a page that does not exist, the HTTP protocol issues a 404 error code. Try it by navigating to http://cs.pugetsound.edu/david_is_awesome.html. It’s sort of a clunky way of telling users a page doesn’t exist, right? It’s ugly and unhelpful. Now try going to a http://pugetsound.edu/david_is_awesome.html on our school’s website. Notice that, this time, the web server is able to redirect you to a better looking page, and it’s also more helpful in providing you links to other existing resources. So, how do you get apache to redirect users to a specified page upon receiving a 404?</i></b></li>
+            <ul><li><b>Answer:</b> To get apache to redirect users to a specified page you edit the config file to include the line ErrorDocument 404 _desired URL_ </li></ul>
+            <li><b><i>How do you give every user on your Linux server their own web space? Enable it now!</i></b></li>
+            <ul><li><b>Answer:</b>  </li></ul>
+        </ol>
+        
+    </body>
+</html>
