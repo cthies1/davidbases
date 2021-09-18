@@ -1,5 +1,12 @@
 body {
-    background-color: peachpuff;
-    color: rebeccapurple;
+    background-color: #ffe3eb;
+    color: #1f4d25;
     font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+img {
+    width: auto;
+    height: 250px;
+    float: right;
+    padding-right: 15px;
 }
