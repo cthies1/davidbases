@@ -6,7 +6,7 @@
         //insert the passenger (UNSAFE!)
         //order matters (look at your schema)
         $stmt = "INSERT INTO passengers VALUES
-            ('$_POST[firstName]', '$_POST[lastName]', '$_POST[ssn]');";
+            ('$_POST[firstName]', '$_POST[middleName]', '$_POST[lastName]', '$_POST[ssn]');";
         $db->exec($stmt);
         //disconnect from database
         $db = null;
