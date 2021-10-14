@@ -1,9 +1,15 @@
 <?php
     try {
         if(null !== ('$_POST[f_name]')){
-        var_dump('$_POST[f_name]');
-        //header("Location: inputForm.html"); 
-        }
+            var_dump('$_POST[f_name]');
+        } else { header("Location: inputForm.html"); }
+        if(null !== ('$_POST[l_name]')){
+            var_dump('$_POST[l_name]');
+        } else { header("Location: inputForm.html"); }
+        if(null !== ('$_POST[ssn]')){
+            var_dump('$_POST[ssn]');
+        } else { header("Location: inputForm.html"); }
+        
         //open the sqlite database file
         $db = new PDO('sqlite:./myDB/airport.db');
         $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
