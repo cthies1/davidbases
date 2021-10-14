@@ -2,9 +2,11 @@
     try {
         if(null == ($_POST['f_name'])){
             header("Location: inputForm.html");
-        } else if(null == ($_POST['l_name'])){
+        } 
+        if(null == ($_POST['l_name'])){
             header("Location: inputForm.html");
-        } else if(null == ($_POST['ssn'])){
+        } 
+        if(null == ($_POST['ssn'])){
             header("Location: inputForm.html");
         }
         
