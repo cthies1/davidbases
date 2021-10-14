@@ -15,10 +15,10 @@
         //order matters (look at your schema)
         $stmt =$db->prepare("INSERT INTO passengers VALUES
             (:f_name, :m_name, :l_name, :ssn);");
-        $stmt->bindValue(':f_name',$POST_['f_name']);
-        $stmt->bindValue(':m_name',$POST_['m_name']);
-        $stmt->bindValue(':l_name',$POST_['l_name']);
-        $stmt->bindValue(':ssn',$POST_['ssn']);
+        $stmt->bindValue(':f_name',$_POST['f_name']);
+        $stmt->bindValue(':m_name',$_POST['m_name']);
+        $stmt->bindValue(':l_name',$_POST['l_name']);
+        $stmt->bindValue(':ssn',$_POST['ssn']);
         $result = $stmt->execute();
         //$db->exec($stmt);
         //disconnect from database
