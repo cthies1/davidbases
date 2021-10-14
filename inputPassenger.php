@@ -1,10 +1,10 @@
 <?php
     try {
-        if(null == ($_POST[f_name])){
+        if(null == ($_POST['f_name'])){
             header("Location: inputForm.html");
-        } else if(null == ($_POST[l_name])){
+        } else if(null == ($_POST['l_name'])){
             header("Location: inputForm.html");
-        } else if(null == ($_POST[ssn])){
+        } else if(null == ($_POST['ssn'])){
             header("Location: inputForm.html");
         }
         
@@ -15,10 +15,10 @@
         //order matters (look at your schema)
         $stmt =$db->prepare("INSERT INTO passengers VALUES
             (:f_name, :m_name, :l_name, :ssn);");
-        $stmt->bindValue(':f_name','$POST_[f_name]');
-        $stmt->bindValue(':m_name','$POST_[m_name]');
-        $stmt->bindValue(':l_name','$POST_[l_name]');
-        $stmt->bindValue(':ssn','$POST_[ssn]');
+        $stmt->bindValue(':f_name',$POST_['f_name']);
+        $stmt->bindValue(':m_name',$POST_['m_name']);
+        $stmt->bindValue(':l_name',$POST_['l_name']);
+        $stmt->bindValue(':ssn',$POST_['ssn']);
         $result = $stmt->execute();
         //$db->exec($stmt);
         //disconnect from database
