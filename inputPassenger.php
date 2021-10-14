@@ -1,7 +1,7 @@
 <?php
     try {
         if(null !== ('$_POST[f_name]')){
-            var_dump('$_POST[f_name]');
+            var_dump($_POST[f_name]);
         } else { header("Location: inputForm.html"); }
         if(null !== ('$_POST[l_name]')){
             var_dump('$_POST[l_name]');
