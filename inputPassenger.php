@@ -1,12 +1,19 @@
 <?php
     try {
+        $fNotNull = false;
+        $lNotNull = false;
+        $sNotNull = false;
+
         if(null == ($_POST['f_name'])){
-            header("Location: inputForm.html");
+            $fNotNull = true;
         } 
         if(null == ($_POST['l_name'])){
-            header("Location: inputForm.html");
+            $lNotNull = true;
         } 
         if(null == ($_POST['ssn'])){
+            $sNotNull = true;
+        }
+        if($fNotNull) {
             header("Location: inputForm.html");
         }
         
