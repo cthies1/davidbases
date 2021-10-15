@@ -4,11 +4,11 @@
         $lNull = false;
         $sNull = false;
         
-        if(null != ($_POST['f_name']) && ctype_alpha($_POST['f_name'])){
+        if(null != ($_POST['f_name']) and ctype_alpha($_POST['f_name'])){
             $fNull = true;
         } 
         
-        if(null != ($_POST['l_name']) && ctype_alpha($_POST['l_name'])){
+        if(null != ($_POST['l_name']) and ctype_alpha($_POST['l_name'])){
             $lNull = true;
         } 
         /*
