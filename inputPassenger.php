@@ -6,7 +6,6 @@
         
         if(null != ($_POST['f_name']) && ctype_alpha($_POST['f_name'])){
             $fNull = true;
-            header("Location: inputForm.html");
         } 
         /*
         if(null != ($_POST['l_name']) && ctype_alpha($_POST['l_name'])){
