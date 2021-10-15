@@ -1,17 +1,17 @@
 <?php
     try {
-        $fNull = true;
-        $lNull = true;
-        $sNull = true;
+        $fNull = false;
+        $lNull = false;
+        $sNull = false;
 
         if(null != ($_POST['f_name']) && ctype_alpha($_POST['f_name'])){
-            $fNull = false;
+            $fNull = true;
         } 
         if(null != ($_POST['l_name']) && ctype_alpha($_POST['l_name'])){
-            $lNull = false;
+            $lNull = true;
         } 
         if(null != ($_POST['ssn']) && preg_match("/[0-9]{3}+-+[0-9]{2}+-+[0-9]{4}+-/", $_POST['f_name'])){
-            $sNull = false;
+            $sNull = true;
         }
         if($fNull) {
 
