@@ -1,21 +1,31 @@
 <?php
     try {
-        $fNotNull = false;
-        $lNotNull = false;
-        $sNotNull = false;
+        $fNull = true;
+        $lNull = true;
+        $sNull = true;
 
-        if(null == ($_POST['f_name'])){
-            $fNotNull = true;
+        if(null != ($_POST['f_name']) && ctype_alpha($_POST['f_name'])){
+            $fNull = false;
         } 
-        if(null == ($_POST['l_name'])){
-            $lNotNull = true;
+        if(null != ($_POST['l_name']) && ctype_alpha($_POST['l_name'])){
+            $lNull = false;
         } 
-        if(null == ($_POST['ssn'])){
-            $sNotNull = true;
+        if(null != ($_POST['ssn'])&& preg_match("/[0-9]{3}+-+[0-9]{2}+-+[0-9]{4}+-/", $_POST['f_name'])){
+            $sNull = false;
         }
-        if($fNotNull) {
+        if($fNull) {
+            
+        }
+        if($lNull) {
+
+        }
+        if($sNull) {
+
+        }
+        if($fNull || $lNull || $sNull) {
             header("Location: inputForm.html");
         }
+        
         
         //open the sqlite database file
         $db = new PDO('sqlite:./myDB/airport.db');
