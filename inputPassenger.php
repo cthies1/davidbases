@@ -7,7 +7,7 @@
         if(null != ($_POST['f_name']) && ctype_alpha($_POST['f_name'])){
             $fNull = true;
         } 
-        /*
+        
         if(null != ($_POST['l_name']) && ctype_alpha($_POST['l_name'])){
             $lNull = true;
         } 
@@ -23,8 +23,8 @@
         if($sNull) {
 
         }
-        */
-        if(!$fNull ) {
+        
+        if(!$fNull || !$lNull || !$sNull) {
             header("Location: inputForm.html");
         }
         
