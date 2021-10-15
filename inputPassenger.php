@@ -3,10 +3,12 @@
         $fNull = false;
         $lNull = false;
         $sNull = false;
-
+        
         if(null != ($_POST['f_name']) && ctype_alpha($_POST['f_name'])){
             $fNull = true;
+            header("Location: inputForm.html");
         } 
+        /*
         if(null != ($_POST['l_name']) && ctype_alpha($_POST['l_name'])){
             $lNull = true;
         } 
@@ -25,6 +27,7 @@
         if($fNull || $lNull || $sNull) {
             header("Location: inputForm.html");
         }
+        */
         
         //open the sqlite database file
         $db = new PDO('sqlite:./myDB/airport.db');
