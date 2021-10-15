@@ -12,9 +12,12 @@
         <p>
             <form action="inputPassenger.php" method="post">
                 First Name: <input type="text" name="f_name"/><br/>
+                <div class ="error" id="firstNameError"></div>
                 Middle Name: <input type="text" name="m_name"/><br/>
                 Last Name: <input type="text" name="l_name"/><br/>
+                <div class ="error" id="lastNameError"></div>
                 Social Security Number: <input type="text" name="ssn"/><br/>
+                <div class ="error" id="socialSecurityError"></div>
                 <input type="submit"/>
             </form>
         </p>
