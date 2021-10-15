@@ -10,11 +10,11 @@
         if(null != ($_POST['l_name']) && ctype_alpha($_POST['l_name'])){
             $lNull = false;
         } 
-        if(null != ($_POST['ssn'])&& preg_match("/[0-9]{3}+-+[0-9]{2}+-+[0-9]{4}+-/", $_POST['f_name'])){
+        if(null != ($_POST['ssn']) && preg_match("/[0-9]{3}+-+[0-9]{2}+-+[0-9]{4}+-/", $_POST['f_name'])){
             $sNull = false;
         }
         if($fNull) {
-            
+
         }
         if($lNull) {
 
