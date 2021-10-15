@@ -25,7 +25,7 @@
 
         }
         */
-        if(!$fNull || !$lNull ) {
+        if(!$fNull or !$lNull ) {
             header("Location: inputForm.html");
         }
         
