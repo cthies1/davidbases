@@ -11,10 +11,11 @@
         if(null != ($_POST['l_name']) and ctype_alpha($_POST['l_name'])){
             $lNull = true;
         } 
-        /*
-        if(null != ($_POST['ssn']) && preg_match("/[0-9]{3}+-+[0-9]{2}+-+[0-9]{4}+-/", $_POST['f_name'])){
+        
+        if(null != ($_POST['ssn']) and preg_match("/[0-9]{3}+-+[0-9]{2}+-+[0-9]{4}+-/", $_POST['f_name'])){
             $sNull = true;
         }
+        /*
         if($fNull) {
 
         }
@@ -25,7 +26,7 @@
 
         }
         */
-        if(!$fNull or !$lNull ) {
+        if(!$fNull or !$lNull or !$sNull) {
             header("Location: inputForm.html");
         }
         
