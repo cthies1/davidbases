@@ -26,7 +26,6 @@
             header("Location: inputForm.html");
         }
         
-        
         //open the sqlite database file
         $db = new PDO('sqlite:./myDB/airport.db');
         $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
