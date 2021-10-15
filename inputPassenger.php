@@ -24,10 +24,11 @@
         if($sNull) {
 
         }
-        if($fNull || $lNull || $sNull) {
+        */
+        if(!$fNull ) {
             header("Location: inputForm.html");
         }
-        */
+        
         
         //open the sqlite database file
         $db = new PDO('sqlite:./myDB/airport.db');
