@@ -12,7 +12,7 @@
             $lNull = true;
         } 
         
-        if(null != ($_POST['ssn']) and preg_match("/[0-9]{3}+-+[0-9]{2}+-+[0-9]{4}+-/", $_POST['ssn'])){
+        if(null != ($_POST['ssn']) and preg_match("/^[0-9]{3}$+-+[0-9]{2}$+-+[0-9]{4}$/", $_POST['ssn'])){
             $sNull = true;
         }
         /*
