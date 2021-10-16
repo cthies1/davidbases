@@ -13,7 +13,8 @@
         } 
         
         //if(null != ($_POST['ssn']) and preg_match("/[0-9]{3}+-+[0-9]{2}+-+[0-9]{4}/", $_POST['ssn']) == 1){
-        if((null != ($_POST['ssn'])) and preg_match('/^[0-9]{3}-[0-9]{2}-[0-9]{4}$/', $_POST['ssn'])){
+        preg_match('/^[0-9]{3}-[0-9]{2}-[0-9]{4}$/', $_POST['ssn'], $matches);
+        if(null != ($_POST['ssn']) and count($matches) > 0){
             $sNull = true;
         }
         /*
