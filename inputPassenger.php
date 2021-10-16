@@ -28,7 +28,7 @@
         }
         */
         if($fNull or $lNull or $sNull) {
-            header("Location: inputForm.html");
+            header("Location: inputForm.html/?error=0");
         }
         
         
