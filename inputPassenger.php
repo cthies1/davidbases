@@ -1,21 +1,21 @@
 <?php
     try {
-        $fNull = false;
-        $lNull = false;
-        $sNull = false;
+        $fNull = true;
+        $lNull = true;
+        $sNull = true;
         
         if(null != ($_POST['f_name']) and ctype_alpha($_POST['f_name'])){
-            $fNull = true;
+            $fNull = false;
         } 
         
         if(null != ($_POST['l_name']) and ctype_alpha($_POST['l_name'])){
-            $lNull = true;
+            $lNull = false;
         } 
         
         //if(null != ($_POST['ssn']) and preg_match("/[0-9]{3}+-+[0-9]{2}+-+[0-9]{4}/", $_POST['ssn']) == 1){
         preg_match('/^[0-9]{3}-[0-9]{2}-[0-9]{4}$/', $_POST['ssn'], $matches);
         if(null != ($_POST['ssn']) and count($matches) > 0){
-            $sNull = true;
+            $sNull = false;
         }
         /*
         if($fNull) {
@@ -28,7 +28,7 @@
 
         }
         */
-        if(!$fNull or !$lNull or !$sNull) {
+        if($fNull or $lNull or $sNull) {
             header("Location: inputForm.html");
         }
         
