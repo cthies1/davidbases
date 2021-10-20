@@ -1,6 +1,7 @@
 <?php
     try {
         $error = 0;
+        $str = "Location: inputForm.html?error=";
         $fNull = true;
         $lNull = true;
         $sNull = true;
@@ -22,7 +23,9 @@
 
         //if($fNull or $lNull or $sNull) {
         if($error > 0) {
-            header("Location: inputForm.html?error=" + $error);
+            $str .= $error;
+            //header("Location: inputForm.html?error=" + $error);
+            header($str);
         }
         else {
     
