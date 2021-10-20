@@ -7,24 +7,27 @@
         $sNull = true;
         
         if(null != ($_POST['f_name']) and ctype_alpha($_POST['f_name'])){
-            //$fNull = false;
+            $fNull = false;
+        } else {
             $error += 100;
-        } 
+        }
         
         if(null != ($_POST['l_name']) and ctype_alpha($_POST['l_name'])){
-            //$lNull = false;
+            $lNull = false;
+        } else {
             $error += 10;
-        } 
+        }
+
         preg_match("/^[0-9]{3}-[0-9]{2}-[0-9]{4}$/", $_POST['ssn'], $matches);
         if (count($matches) > 0) {
-            //$sNull = false;
+            $sNull = false;
+        } else {
             $error += 1;
         }
 
         //if($fNull or $lNull or $sNull) {
         if($error > 0) {
             $str .= $error;
-            //header("Location: inputForm.html?error=" + $error);
             header($str);
         }
         else {
