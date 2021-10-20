@@ -19,27 +19,7 @@
             //$sNull = false;
             $error += 1;
         }
-        // if(preg_match("/^[0-9]{3}-[0-9]{2}-[0-9]{4}$/", $_POST['ssn'])){
-        //     $sNull = false;
-        // }
-            
-        
-        
-        //preg_match("/^[0-9]{3}-[0-9]{2}-[0-9]{4}$/", $_POST['ssn'], $matches);
-        //if(count($matches) > 0){
-        //    $sNull = false;
-        //}
-        /*
-        if($fNull) {
 
-        }
-        if($lNull) {
-
-        }
-        if($sNull) {
-
-        }
-        */
         //if($fNull or $lNull or $sNull) {
         if($error > 0) {
             header("Location: inputForm.html?error=" + $error);
