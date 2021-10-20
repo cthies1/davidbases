@@ -37,7 +37,6 @@
         }
         */
         if($fNull or $lNull or $sNull) {
-            echo "something went wrong!";
             header("Location: inputForm.html?error=0");
         }
         else {
@@ -58,11 +57,13 @@
         }
         //disconnect from database
         $db = null;
+
+    //redirect user to another page
+    header("Location: showPassengers.php");
     }
     catch(PDOException $e)
     {
-    die('Exception : '.$e->getMessage());
+        die('Exception : '.$e->getMessage());
     }
-    //redirect user to another page
-    header("Location: showPassengers.php");
+
 ?>
