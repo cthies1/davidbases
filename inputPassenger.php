@@ -2,26 +2,39 @@
     try {
         $error = 0;
         $str = "Location: inputForm.html?error=";
-        $fNull = true;
-        $lNull = true;
-        $sNull = true;
+        // $fNull = true;
+        // $lNull = true;
+        // $sNull = true;
         
-        if(null != ($_POST['f_name']) and ctype_alpha($_POST['f_name'])){
-            $fNull = false;
-        } else {
+        // if(null != ($_POST['f_name']) and ctype_alpha($_POST['f_name'])){
+        //     $fNull = false;
+        // } else {
+        //     $error += 100;
+        // }
+
+        // if(null != ($_POST['l_name']) and ctype_alpha($_POST['l_name'])){
+        //     $lNull = false;
+        // } else {
+        //     $error += 10;
+        // }
+
+        // preg_match("/^[0-9]{3}-[0-9]{2}-[0-9]{4}$/", $_POST['ssn'], $matches);
+        // if (count($matches) > 0) {
+        //     $sNull = false;
+        // } else {
+        //     $error += 1;
+        // }
+
+        if(null == ($_POST['f_name']) or !ctype_alpha($_POST['f_name'])){
             $error += 100;
         }
         
-        if(null != ($_POST['l_name']) and ctype_alpha($_POST['l_name'])){
-            $lNull = false;
-        } else {
+        if(null == ($_POST['l_name']) or !ctype_alpha($_POST['l_name'])){
             $error += 10;
         }
 
         preg_match("/^[0-9]{3}-[0-9]{2}-[0-9]{4}$/", $_POST['ssn'], $matches);
-        if (count($matches) > 0) {
-            $sNull = false;
-        } else {
+        if (count($matches) <= 0) {
             $error += 1;
         }
 
