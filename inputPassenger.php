@@ -11,10 +11,11 @@
         if(null != ($_POST['l_name']) and ctype_alpha($_POST['l_name'])){
             $lNull = false;
         } 
-        if(preg_match("/^[0-9]{3}-[0-9]{2}-[0-9]{4}$/", $_POST['ssn'])){
+        preg_match("/^[0-9]{3}-[0-9]{2}-[0-9]{4}$/", $_POST['ssn'],$matches);
+        if(count($matches)>0){
             $sNull = false;
-
         }
+        
         //preg_match("/^[0-9]{3}-[0-9]{2}-[0-9]{4}$/", $_POST['ssn'], $matches);
         //if(count($matches) > 0){
         //    $sNull = false;
