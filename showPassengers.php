@@ -33,6 +33,21 @@
         }
     ?>
 
+    <table>
+        <tr>
+            <th>SSN</th>
+            <th>First Name</th>
+            <th>Middle Name</th>
+            <th>Last Name</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+    </table>
+
 </p>
 </body>
 </html>
