@@ -40,7 +40,7 @@
             header("Location: inputForm.html?error=0");
         }
         else {
-        
+    
             //open the sqlite database file
             $db = new PDO('sqlite:./myDB/airport.db');
             $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -54,12 +54,12 @@
             $stmt->bindValue(':ssn',$_POST['ssn']);
             $result = $stmt->execute();
             //$db->exec($stmt);
+
+            //redirect user to another page
+            header("Location: showPassengers.php");
         }
         //disconnect from database
         $db = null;
-
-    //redirect user to another page
-    header("Location: showPassengers.php");
     }
     catch(PDOException $e)
     {
