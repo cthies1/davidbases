@@ -11,9 +11,18 @@
     <body>
         <p>
             <?php
-                echo $_GET["error"];
-                // if ($_GET["error"] == 111)
-                //     echo "Wooh!!";
+                if ($_GET["error"] == 123)
+                    echo "fname, lname, ssn";
+                if ($_GET["error"] == 120)
+                    echo "fname, lname";
+                if ($_GET["error"] == 100)
+                    echo "fname";
+                if ($_GET["error"] == 23)
+                    echo "lname, ssn";
+                if ($_GET["error"] == 20)
+                    echo "lname";
+                if ($_GET["error"] == 3)
+                    echo "ssn";
             ?>
             <form action="inputPassenger.php" method="post">
                 First Name: <input type="text" name="f_name"/><br/>
