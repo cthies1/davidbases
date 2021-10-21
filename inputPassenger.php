@@ -25,17 +25,17 @@
         //     $error += 1;
         // }
 
-        if(null == ($_POST['f_name']) or !ctype_alpha($_POST['f_name'])){
-            $error += 100;
+        if(null == ($_POST['f_name']) or !ctype_alpha($_POST['f_name'])){//fname
+            $error += 1;
         }
         
-        if(null == ($_POST['l_name']) or !ctype_alpha($_POST['l_name'])){
-            $error += 10;
+        if(null == ($_POST['l_name']) or !ctype_alpha($_POST['l_name'])){//lname
+            $error += 20;
         }
 
-        preg_match("/^[0-9]{3}-[0-9]{2}-[0-9]{4}$/", $_POST['ssn'], $matches);
+        preg_match("/^[0-9]{3}-[0-9]{2}-[0-9]{4}$/", $_POST['ssn'], $matches);//ssn
         if (count($matches) <= 0) {
-            $error += 1;
+            $error += 300;
         }
 
         //if($fNull or $lNull or $sNull) {
