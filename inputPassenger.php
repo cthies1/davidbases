@@ -1,7 +1,7 @@
 <?php
     try {
         $error = 0;
-        $str = "Location: inputForm.html?error=";
+        $str = "Location: inputForm.php?error=";
         // $fNull = true;
         // $lNull = true;
         // $sNull = true;
@@ -26,7 +26,7 @@
         // }
 
         if(null == ($_POST['f_name']) or !ctype_alpha($_POST['f_name'])){//fname
-            $error += 1;
+            $error += 100;
         }
         
         if(null == ($_POST['l_name']) or !ctype_alpha($_POST['l_name'])){//lname
@@ -35,7 +35,7 @@
 
         preg_match("/^[0-9]{3}-[0-9]{2}-[0-9]{4}$/", $_POST['ssn'], $matches);//ssn
         if (count($matches) <= 0) {
-            $error += 300;
+            $error += 3;
         }
 
         //if($fNull or $lNull or $sNull) {
