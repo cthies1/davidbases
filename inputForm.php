@@ -12,17 +12,24 @@
         <p>
             <?php
                 if ($_GET["error"] == 123)
-                    echo "fname, lname, ssn";
+                    echo "Invalid first name!";
+                    echo "Invalid last name!";
+                    echo "Invalid ssn!";
                 if ($_GET["error"] == 120)
-                    echo "fname, lname";
+                    echo "Invalid first name!";
+                    echo "Invalid last name!";
+                if ($_GET["error"] == 103)
+                    echo "Invalid first name!";
+                    echo "Invalid ssn!";
                 if ($_GET["error"] == 100)
-                    echo "fname";
+                    echo "Invalid first name!";
                 if ($_GET["error"] == 23)
-                    echo "lname, ssn";
+                    echo "Invalid last name!";
+                    echo "Invalid ssn!";
                 if ($_GET["error"] == 20)
-                    echo "lname";
+                    echo "Invalid last name!";
                 if ($_GET["error"] == 3)
-                    echo "ssn";
+                    echo "Invalid ssn!";
             ?>
             <form action="inputPassenger.php" method="post">
                 First Name: <input type="text" name="f_name"/><br/>
