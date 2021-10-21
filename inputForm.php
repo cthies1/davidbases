@@ -10,6 +10,11 @@
     </head>
     <body>
         <p>
+            <?php
+                echo $_GET["error"];
+                // if ($_GET["error"] == 111)
+                //     echo "Wooh!!";
+            ?>
             <form action="inputPassenger.php" method="post">
                 First Name: <input type="text" name="f_name"/><br/>
                 <div class ="error" id="firstNameError"></div>
