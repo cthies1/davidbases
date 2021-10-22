@@ -54,7 +54,8 @@
                 echo "<td>$tuple[f_name]</td>";
                 echo "<td>$tuple[m_name]</td>";
                 echo "<td> $tuple[l_name]</td>";
-                echo "<td><a href='inputForm.php$ssn='.$tuple[ssn].'f_name='.$tuple[f_name].'m_name='.$tuple[m_name].'l_name='.$tuple[l_name]>Update</a></td>";
+                $updatelink = "inputForm.php?ssn=".$tuple[ssn]."f_name=".$tuple[f_name]."m_name=".$tuple[m_name]."l_name=".$tuple[l_name];
+                echo "<td><a href=$updatelink>Update</a></td>";
                 echo "</tr>"; 
              } 
              echo "</table>";  
