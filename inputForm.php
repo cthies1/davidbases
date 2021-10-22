@@ -15,17 +15,16 @@
                 $err = $_GET["error"];
                 
                 if($err >=100){
-                    echo "Invalid first name \r\n";
+                    echo "<font color='red'>Invalid first name </br>";
                     $err = $err-100;
                 }
                 if($err>=20){
-                    echo "Invalid last name  \r\n";
+                    echo "<font color='red'>Invalid last name </br>";
                     $err = $err-20;
                 }
                 if($err>=3){
-                    echo "Invalid ssn  \r\n";
+                    echo "<font color='red'>Invalid ssn </br>";
                     $err = $err-3;
-
                 }
             }
             
