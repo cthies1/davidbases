@@ -21,13 +21,13 @@
                 if()
                 */
                 
-                if(strpos($_GET["error"], '1') === 0){ //fname error
+                if(!(strpos($_GET["error"], '1') == false)){ //fname error
                     echo "invalid first name  \n";
                 }
-                if(strpos($_GET["error"], '2')){ //lname error
+                if(!(strpos($_GET["error"], '2') == false)){ //lname error
                     echo "invalid last name  \n";
                 }
-                if(strpos($_GET["error"], '3')){ //ssn error
+                if(!(strpos($_GET["error"], '3') == false)){ //ssn error
                     echo "invalid ssn  \n";
                 }
                 
