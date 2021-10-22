@@ -56,7 +56,7 @@
                 <div class ="error" id="lastNameError"></div>
                 Social Security Number: <input type="text" name="ssn" value="<?php echo $ssn ?>" /></br></br>
                 <div class ="error" id="socialSecurityError"></div>
-                <input type="submit"/>
+                <input type="submit" value="sub"/>
             </form>
         </p>
         
