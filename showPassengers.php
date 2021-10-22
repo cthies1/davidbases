@@ -40,9 +40,17 @@
 
             //loop through each tuple in result set and print out the data
             //ssn will be shown in blue (see below)
+       
+            //foreach($result_set as $tuple) {          // <------ Line 24
+             //   echo "<font color='blue'>$tuple[ssn]</font> $tuple[f_name] $tuple[m_name] $tuple[l_name]<br/>\n";
+            //}
             foreach($result_set as $tuple) {          // <------ Line 24
-                echo "<font color='blue'>$tuple[ssn]</font> $tuple[f_name] $tuple[m_name] $tuple[l_name]<br/>\n";
-            }
+                echo "<td>$tuple[ssn]</td>";
+                echo "<td>$tuple[f_name]</td>";
+                echo "<td>$tuple[m_name]</td>";
+                echo "<td> $tuple[l_name]</td>";
+                echo "<td><a href="">Update</a></td>";
+             }   
 
             //disconnect from db
             $db = null;
@@ -52,22 +60,27 @@
         }
         ?>
 
-        <table>
+        <!-- <table>
             <tr>
                 <th>SSN</th>
                 <th>First Name</th>
                 <th>Middle Name</th>
                 <th>Last Name</th>
             </tr>
-            <?php while($row1 = $result_set->fetchArray()):;?>
+            
             <tr>
-                <td><?php echo $row1[0];?></td>
-                <td><?php echo $row1[1];?></td>
-                <td><?php echo $row1[2];?></td>
-                <td><?php echo $row1[3];?></td>
+             foreach($result_set as $tuple) {          // <------ Line 24
+                echo "<font color='blue'>$tuple[ssn]</font> $tuple[f_name] $tuple[m_name] $tuple[l_name]<br/>\n";
+                echo "<td>$tuple[ssn]</td>"
+                echo "<td>$tuple[f_name]</td>"
+                echo "<td>$tuple[m_name]</td>"
+                echo "<td> $tuple[l_name]</td>"
+                echo "<td><a href="">Update</a></td>"
+             }    
             </tr>
-            <?php endwhile;?>
-        </table>
+            
+        </table> -->
+        
     </body>
 </html>
         
