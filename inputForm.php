@@ -11,6 +11,19 @@
     <body>
         <p>
             <?php
+            if(!is_null($_GET["error"])){
+                if(strpos($_GET["error"], '1') == 0){ //fname error
+                    echo "invalid first name  \n";
+                }
+                if(strpos($_GET["error"], '2')){ //lname error
+                    echo "invalid last name  \n";
+                }
+                if(strpos($_GET["error"], '3')){ //ssn error
+                    echo "invalid ssn  \n";
+                }
+
+            }
+            /*
                 if ($_GET["error"] == 123)
                     echo "Invalid first name!";
                     echo "Invalid last name!";
@@ -30,6 +43,7 @@
                     echo "Invalid last name!";
                 if ($_GET["error"] == 3)
                     echo "Invalid ssn!";
+                    */
             ?>
             <form action="inputPassenger.php" method="post">
                 First Name: <input type="text" name="f_name"/><br/>
