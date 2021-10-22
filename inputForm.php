@@ -14,13 +14,21 @@
             if(isset($_GET["error"])){
                 echo ($_GET["error"]);
                 $err = $_GET["error"];
-                /*
+                
                 if($err >=100){
                     echo "invalid first name  \n";
+                    $err = $err-100;
                 }
-                if()
-                */
+                if($err>=20){
+                    echo "invalid last name  \n";
+                    $err = $err-20;
+                }
+                if($err>=3){
+                    echo "invalid ssn  \n";
+                    $err = $err-3;
+                }
                 
+                /*
                 if(!(strpos($_GET["error"], '1') == false)){ //fname error
                     echo "invalid first name  \n";
                 }
@@ -30,7 +38,7 @@
                 if(!(strpos($_GET["error"], '3') == false)){ //ssn error
                     echo "invalid ssn  \n";
                 }
-                
+                */
 
             }
             /*
