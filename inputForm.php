@@ -40,12 +40,12 @@
 
             ?>
             <form action="inputPassenger.php" method="post">
-                First Name: <input type="text" name="f_name" value="<?php echo $f_name ?>" /><br/>
+                First Name: <input type="text" name="f_name" value="<?php echo $f_name ?>" /></br>
                 <div class ="error" id="firstNameError"></div>
-                Middle Name: <input type="text" name="m_name" value="<?php echo $m_name ?>" /><br/>
-                Last Name: <input type="text" name="l_name" value="<?php echo $l_name ?>" /><br/>
+                Middle Name: <input type="text" name="m_name" value="<?php echo $m_name ?>" /></br>
+                Last Name: <input type="text" name="l_name" value="<?php echo $l_name ?>" /></br>
                 <div class ="error" id="lastNameError"></div>
-                Social Security Number: <input type="text" name="ssn" value="<?php echo $ssn ?>" /><br/>
+                Social Security Number: <input type="text" name="ssn" value="<?php echo $ssn ?>" /></br>
                 <div class ="error" id="socialSecurityError"></div>
                 <input type="submit"/>
             </form>
