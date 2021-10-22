@@ -18,6 +18,7 @@
 
         if($error > 0) {
             $str = "Location: inputForm.php?error=".$error;
+            if (isset($_GET['update'])) $str .= "&update=".$_GET['update'];
             header($str);
         }
         else {
