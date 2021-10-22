@@ -29,13 +29,13 @@
             }
             
             if(isset($_GET["f_name"])) $f_name = $_GET["f_name"];
-            else $f_name = "";
+            //else $f_name = "";
             if(isset($_GET["m_name"])) $m_name = $_GET["m_name"];
-            else $m_name = "";
+            //else $m_name = "";
             if(isset($_GET["l_name"])) $l_name = $_GET["l_name"];
-            else $l_name = "";
+            //else $l_name = "";
             if(isset($_GET["ssn"])) $ssn = $_GET["ssn"];
-            else $ssn = "";
+            //else $ssn = "";
 
             ?>
             <form action="inputPassenger.php" method="post">
