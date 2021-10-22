@@ -11,7 +11,7 @@
     <body>
         <p>
             <?php
-            if(!is_null($_GET["error"])){
+            if(isset($_GET["error"])){
                 if(strpos($_GET["error"], '1') == 0){ //fname error
                     echo "invalid first name  \n";
                 }
