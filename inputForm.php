@@ -15,7 +15,7 @@
                 $err = $_GET["error"];
                 
                 if($err >=100){
-                    echo "invalid first name ";
+                    echo "<p> <font color=red>invalid first name </font> </p>";
                     echo "\n";
                     $err = $err-100;
                 }
