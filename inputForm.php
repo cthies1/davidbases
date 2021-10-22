@@ -12,7 +12,16 @@
         <p>
             <?php
             if(isset($_GET["error"])){
-                if(strpos($_GET["error"], '1') == 0){ //fname error
+                echo ($_GET["error"]);
+                $err = $_GET["error"];
+                /*
+                if($err >=100){
+                    echo "invalid first name  \n";
+                }
+                if()
+                */
+                
+                if(strpos($_GET["error"], '1') === 0){ //fname error
                     echo "invalid first name  \n";
                 }
                 if(strpos($_GET["error"], '2')){ //lname error
@@ -21,6 +30,7 @@
                 if(strpos($_GET["error"], '3')){ //ssn error
                     echo "invalid ssn  \n";
                 }
+                
 
             }
             /*
