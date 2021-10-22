@@ -39,12 +39,10 @@
             <th>First Name</th>
             <th>Middle Name</th>
             <th>Last Name</th>
+            <th>Update Link</th>
         </tr>
         <tr>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
-            <td>4</td>
+            <div id =tableEntries></div>
         </tr>
     </table>
 
