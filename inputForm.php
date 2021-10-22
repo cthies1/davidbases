@@ -39,8 +39,9 @@
             if(isset($_GET["ssn"])) $ssn = $_GET["ssn"];
             else $ssn = "";
 
+            $link = "inputPassenger.php?update=".$update
             ?>
-            <form action=<?php "inputPassenger.php?update=".$update ?>  method="post">
+            <form action=<?php $link ?>  method="post">
                 First Name: <input type="text" name="f_name" value="<?php echo $f_name ?>" /></br></br>
                 <div class ="error" id="firstNameError"></div>
                 Middle Name: <input type="text" name="m_name" value="<?php echo $m_name ?>" /></br></br>
