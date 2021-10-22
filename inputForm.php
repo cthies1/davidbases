@@ -29,8 +29,6 @@
                 }
             }
 
-            echo "<font color='black'>";
-
             if(isset($_GET["update"])) $update = $_GET["update"];
             else $update = "";
             
@@ -53,6 +51,8 @@
                 $link .= "&update=".$_GET['update'];
                 $button = "Update";
             }
+
+            echo "<font color='black'>";
             ?>
             <form action="<?php echo $link ?>"  method="post">
                 First Name: <input type="text" name="f_name" value="<?php echo $f_name ?>" /></br></br>
