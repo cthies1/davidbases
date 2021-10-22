@@ -1,7 +1,6 @@
 <?php
     try {
         $error = 0;
-        $str = "Location: inputForm.php?error=";
         
         if(null == ($_POST['f_name']) or !ctype_alpha($_POST['f_name'])){//fname
             $error += 100;
@@ -17,7 +16,7 @@
         }
 
         if($error > 0) {
-            $str .= $error;
+            $str = "Location: inputForm.php?error=".$error;
             header($str);
         }
         else {
