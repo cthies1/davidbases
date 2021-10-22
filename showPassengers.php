@@ -27,16 +27,19 @@
 
             echo "<table style='border:1px solid black; border-collapse: collapse;'>";
             echo "<tr style='border:1px solid black; border-collapse: collapse;'>";
-                echo "<th>SSN</th><th>First Name</th><th>Middle Name</th><th>Last Name</th>";
+                echo "<th style='border:1px solid black; border-collapse: collapse;'>SSN</th>";
+                echo "<th style='border:1px solid black; border-collapse: collapse;'>First Name</th>";
+                echo "<th style='border:1px solid black; border-collapse: collapse;'>Middle Name</th>";
+                echo "<th style='border:1px solid black; border-collapse: collapse;'>Last Name</th>";
             echo "</tr>";
             foreach($result_set as $tuple) {
                 echo "<tr style='border:1px solid black; border-collapse: collapse;'>";
-                echo "<td>$tuple[ssn]</td>";
-                echo "<td>$tuple[f_name]</td>";
-                echo "<td>$tuple[m_name]</td>";
-                echo "<td> $tuple[l_name]</td>";
+                echo "<td style='border:1px solid black; border-collapse: collapse;'>$tuple[ssn]</td>";
+                echo "<td style='border:1px solid black; border-collapse: collapse;'>$tuple[f_name]</td>";
+                echo "<td style='border:1px solid black; border-collapse: collapse;'>$tuple[m_name]</td>";
+                echo "<td style='border:1px solid black; border-collapse: collapse;'> $tuple[l_name]</td>";
                 $updatelink = "inputForm.php?ssn=".$tuple['ssn']."&f_name=".$tuple['f_name']."&m_name=".$tuple['m_name']."&l_name=".$tuple['l_name']."&update=".$tuple['ssn'];
-                echo "<td><a href=$updatelink>Update</a></td>";
+                echo "<td style='border:1px solid black; border-collapse: collapse;'><a href=$updatelink>Update</a></td>";
                 echo "</tr>"; 
              } 
              echo "</table>";  
