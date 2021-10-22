@@ -12,7 +12,13 @@ img {
   border-radius: 5px;
   border: 2px solid black;
 }
+
 .error {
   font-size: 12pt;
   color: rgb(119, 19, 19);
+}
+
+table, th, td {
+  border:1px solid black;
+  border-collapse: collapse;
 }

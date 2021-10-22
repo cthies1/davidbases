@@ -44,7 +44,7 @@
             //foreach($result_set as $tuple) {          // <------ Line 24
              //   echo "<font color='blue'>$tuple[ssn]</font> $tuple[f_name] $tuple[m_name] $tuple[l_name]<br/>\n";
             //}
-            echo "<table style='border: 1px solid black; border-collapse: collapse;'>";
+            echo "<table>";
             echo "<tr>";
                 echo "<th>SSN</th><th>First Name</th><th>Middle Name</th><th>Last Name</th>";
             echo "</tr>";
