@@ -1,6 +1,7 @@
 <?php
     try {
         $error = 0;
+        //$update = false;
         
         if(null == ($_POST['f_name']) or !ctype_alpha($_POST['f_name'])){//fname
             $error += 100;
@@ -26,6 +27,11 @@
             $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             //insert the passenger (UNSAFE!)
             //order matters (look at your schema)
+            if (isset($_POST['update'])) {
+                $quer = $db->prepare("delete from passengers where ssn = :s");
+                $quer->bindValue(':s',$_POST['ssn']);
+                $result = $quer->execute();
+            }
             $stmt =$db->prepare("INSERT INTO passengers VALUES
                 (:f_name, :m_name, :l_name, :ssn);");
             $stmt->bindValue(':f_name',$_POST['f_name']);
