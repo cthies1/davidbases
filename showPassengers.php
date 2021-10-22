@@ -44,13 +44,20 @@
             //foreach($result_set as $tuple) {          // <------ Line 24
              //   echo "<font color='blue'>$tuple[ssn]</font> $tuple[f_name] $tuple[m_name] $tuple[l_name]<br/>\n";
             //}
+            echo "<table>";
+            echo "<tr>";
+                echo "<th>SSN</th><th>First Name</th><th>Middle Name</th><th>Last Name</th>";
+            echo "</tr>";
             foreach($result_set as $tuple) {          // <------ Line 24
+                echo "<tr>";
                 echo "<td>$tuple[ssn]</td>";
                 echo "<td>$tuple[f_name]</td>";
                 echo "<td>$tuple[m_name]</td>";
                 echo "<td> $tuple[l_name]</td>";
                 echo "<td><a href=''>Update</a></td>";
-             }   
+                echo "</tr>"; 
+             } 
+             echo "</table>";  
 
             //disconnect from db
             $db = null;
