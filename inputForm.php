@@ -29,6 +29,7 @@
                 }
             }
             if(isset($_GET["update"])) $update = $_GET["update"];
+            else $update = "";
             
             if(isset($_GET["f_name"])) $f_name = $_GET["f_name"];
             else $f_name = "";
