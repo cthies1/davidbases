@@ -56,12 +56,12 @@
             ?>
             <form action="<?php echo $link ?>"  method="post">
                 First Name: <input type="text" name="f_name" value="<?php echo $f_name ?>" /></br></br>
-                <div class ="error" id="firstNameError"></div>
+                <!-- <div class ="error" id="firstNameError"></div> -->
                 Middle Name: <input type="text" name="m_name" value="<?php echo $m_name ?>" /></br></br>
                 Last Name: <input type="text" name="l_name" value="<?php echo $l_name ?>" /></br></br>
-                <div class ="error" id="lastNameError"></div>
+                <!-- <div class ="error" id="lastNameError"></div> -->
                 Social Security Number: <input type="text" name="ssn" value="<?php echo $ssn ?>" /></br></br>
-                <div class ="error" id="socialSecurityError"></div>
+                <!-- <div class ="error" id="socialSecurityError"></div> -->
                 <input type="submit" value="<?php echo $button ?>" />
             </form>
         </p>
