@@ -28,6 +28,9 @@
                     $err = $err-3;
                 }
             }
+
+            echo "<font color='black'>";
+
             if(isset($_GET["update"])) $update = $_GET["update"];
             else $update = "";
             
