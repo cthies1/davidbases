@@ -49,7 +49,7 @@
             if (isset($_GET['l_name'])) $link .= "&l_name=".$_GET['l_name'];
             if (isset($_GET['update'])) {
                 $link .= "&update=".$_GET['update'];
-                $button = "Update";
+                $button = "Update Info";
             }
 
             echo "<font color='black'>";
