@@ -47,7 +47,7 @@
             //$db->exec($stmt);
 
             //redirect user to another page
-            header("Location: showPassengers.php");
+            header("Location: showPassengers.php?success=true");
         }
         //disconnect from database
         $db = null;

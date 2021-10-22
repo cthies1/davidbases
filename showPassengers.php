@@ -10,7 +10,11 @@
     </head>
     <body>
 
+        <h1>Passenger Table</h1>
+
         <?php
+        if(isset($_GET["success"])) echo "<font color='blue'>Success! </br>";
+
          //path to the SQLite database file
         $db_file = './myDB/airport.db';
 
