@@ -40,7 +40,7 @@
             if(isset($_GET["ssn"])) $ssn = $_GET["ssn"];
             else $ssn = "";
 
-            $link = "inputPassenger.php?update=".$update;
+            $link = "inputPassenger.php?&ssn=".$ssn."&f_name=".$f_name."&m_name=".$m_name."&l_name=".$l_name."&update=".$update;
             ?>
             <form action="<?php echo $link ?>"  method="post">
                 First Name: <input type="text" name="f_name" value="<?php echo $f_name ?>" /></br></br>
