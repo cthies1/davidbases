@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="./assets/css/styles.css" />
     </head>
     <body>
-        <h3>Input Form</h3>
+        <h1>Input Passengers Form:</h1>
         <p>
             <?php
             if(isset($_GET["error"])){
