@@ -15,61 +15,33 @@
                 $err = $_GET["error"];
                 
                 if($err >=100){
-                    echo "invalid first name \r\n";
+                    echo "Invalid first name \r\n";
                     $err = $err-100;
                 }
                 if($err>=20){
-                    echo "invalid last name  \r\n";
+                    echo "Invalid last name  \r\n";
                     $err = $err-20;
                 }
                 if($err>=3){
-                    echo "invalid ssn  \r\n";
+                    echo "Invalid ssn  \r\n";
                     $err = $err-3;
 
                 }
-                 
-                /*
-                if(!(strpos($_GET["error"], '1') == false)){ //fname error
-                    echo "invalid first name  \n";
-                }
-                if(!(strpos($_GET["error"], '2') == false)){ //lname error
-                    echo "invalid last name  \n";
-                }
-                if(!(strpos($_GET["error"], '3') == false)){ //ssn error
-                    echo "invalid ssn  \n";
-                }
-                */
-
             }
-            /*
-                if ($_GET["error"] == 123)
-                    echo "Invalid first name!";
-                    echo "Invalid last name!";
-                    echo "Invalid ssn!";
-                if ($_GET["error"] == 120)
-                    echo "Invalid first name!";
-                    echo "Invalid last name!";
-                if ($_GET["error"] == 103)
-                    echo "Invalid first name!";
-                    echo "Invalid ssn!";
-                if ($_GET["error"] == 100)
-                    echo "Invalid first name!";
-                if ($_GET["error"] == 23)
-                    echo "Invalid last name!";
-                    echo "Invalid ssn!";
-                if ($_GET["error"] == 20)
-                    echo "Invalid last name!";
-                if ($_GET["error"] == 3)
-                    echo "Invalid ssn!";
-                    */
+            
+            $f_name = $_GET["f_name"];
+            $m_name = $_GET["m_name"];
+            $l_name = $_GET["l_name"];
+            $ssn = $_GET["ssn"];
+
             ?>
             <form action="inputPassenger.php" method="post">
-                First Name: <input type="text" name="f_name"/><br/>
+                First Name: <input type="text" name="f_name" value=<?php $f_name ?>/><br/>
                 <div class ="error" id="firstNameError"></div>
-                Middle Name: <input type="text" name="m_name"/><br/>
-                Last Name: <input type="text" name="l_name"/><br/>
+                Middle Name: <input type="text" name="m_name" value=<?php $m_name ?>/><br/>
+                Last Name: <input type="text" name="l_name" value=<?php $l_name ?>/><br/>
                 <div class ="error" id="lastNameError"></div>
-                Social Security Number: <input type="text" name="ssn"/><br/>
+                Social Security Number: <input type="text" name="ssn" value=<?php $ssn ?>/><br/>
                 <div class ="error" id="socialSecurityError"></div>
                 <input type="submit"/>
             </form>
