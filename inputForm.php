@@ -49,6 +49,7 @@
             if (isset($_GET['update'])) {
                 $link .= "&update=".$_GET['update'];
                 $button = "Update";
+            }
             ?>
             <form action="<?php echo $link ?>"  method="post">
                 First Name: <input type="text" name="f_name" value="<?php echo $f_name ?>" /></br></br>
@@ -58,7 +59,7 @@
                 <div class ="error" id="lastNameError"></div>
                 Social Security Number: <input type="text" name="ssn" value="<?php echo $ssn ?>" /></br></br>
                 <div class ="error" id="socialSecurityError"></div>
-                <input type="submit" value="<?php echo $button ?>"/>
+                <input type="submit" value="<?php echo $button ?>" />
             </form>
         </p>
         
