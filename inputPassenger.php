@@ -27,9 +27,9 @@
             $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             //insert the passenger (UNSAFE!)
             //order matters (look at your schema)
-            if (isset($_POST['update'])) {
-                $quer = $db->prepare("delete from passengers where ssn = :s");
-                $quer->bindValue(':s',$_POST['ssn']);
+            if (isset($_GET['update'])) {
+                $quer = $db->prepare("DELETE FROM passengers WHERE ssn = :s");
+                $quer->bindValue(':s',$_GET['update']);
                 $result = $quer->execute();
             }
             $stmt =$db->prepare("INSERT INTO passengers VALUES

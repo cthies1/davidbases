@@ -28,6 +28,7 @@
                     $err = $err-3;
                 }
             }
+            if(isset($_GET["update"])) $update = $_GET["update"];
             
             if(isset($_GET["f_name"])) $f_name = $_GET["f_name"];
             else $f_name = "";
@@ -39,7 +40,7 @@
             else $ssn = "";
 
             ?>
-            <form action="inputPassenger.php" method="post">
+            <form action=<?php "inputPassenger.php?update=".$update ?>  method="post">
                 First Name: <input type="text" name="f_name" value="<?php echo $f_name ?>" /></br></br>
                 <div class ="error" id="firstNameError"></div>
                 Middle Name: <input type="text" name="m_name" value="<?php echo $m_name ?>" /></br></br>
