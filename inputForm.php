@@ -40,7 +40,7 @@
 
             ?>
             <form action="inputPassenger.php" method="post">
-                First Name: <input type="text" name="f_name" value=<?php echo $f_name ?> /><br/>
+                First Name: <input type="text" name="f_name" value="<?php echo $f_name ?>" /><br/>
                 <div class ="error" id="firstNameError"></div>
                 Middle Name: <input type="text" name="m_name" value=<?php echo $m_name ?> /><br/>
                 Last Name: <input type="text" name="l_name" value=<?php echo $l_name ?> /><br/>
