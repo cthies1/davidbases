@@ -49,7 +49,7 @@
                 echo "<td>$tuple[f_name]</td>";
                 echo "<td>$tuple[m_name]</td>";
                 echo "<td> $tuple[l_name]</td>";
-                echo "<td><a href="">Update</a></td>";
+                echo "<td><a href=''>Update</a></td>";
              }   
 
             //disconnect from db
