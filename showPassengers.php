@@ -59,7 +59,7 @@
                 <th>Middle Name</th>
                 <th>Last Name</th>
             </tr>
-            <?php while($row1 = sqlite_fetch_array($result_set)):;?>
+            <?php while($row1 = $result_set->fetchArray()):;?>
             <tr>
                 <td><?php echo $row1[0];?></td>
                 <td><?php echo $row1[1];?></td>
