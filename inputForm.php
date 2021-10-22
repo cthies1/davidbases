@@ -29,10 +29,10 @@
                 }
             }
             
-            $f_name = $_GET["f_name"];
-            $m_name = $_GET["m_name"];
-            $l_name = $_GET["l_name"];
-            $ssn = $_GET["ssn"];
+            if(isset($_GET["f_name"])) $f_name = $_GET["f_name"];
+            if(isset($_GET["m_name"])) $m_name = $_GET["m_name"];
+            if(isset($_GET["l_name"])) $l_name = $_GET["l_name"];
+            if(isset($_GET["ssn"])) $ssn = $_GET["ssn"];
 
             ?>
             <form action="inputPassenger.php" method="post">
