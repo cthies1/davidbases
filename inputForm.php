@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="./assets/css/styles.css" />
     </head>
     <body>
+        <h3>Input Form</h3>
         <p>
             <?php
             if(isset($_GET["error"])){
