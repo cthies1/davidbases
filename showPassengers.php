@@ -17,9 +17,12 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title> PASSENGERS </title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-sacle=1.0">
+    <meta charset="utf-8" />
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+        <title>Show Passengers Table</title>
+        <meta name="description" content="This is a table of passengers." />
+        <meta name="author" content="Chloe, Bee, Anna, Diggy" />
+        <link rel="stylesheet" href="./assets/css/styles.css" />
     </head>
     <body>
 
