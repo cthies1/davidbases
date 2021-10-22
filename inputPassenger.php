@@ -18,11 +18,11 @@
 
         if($error > 0) {
             $str = "Location: inputForm.php?error=".$error;
-            if (isset($_GET['update'])) $str .= "&update=".$_GET['update'];
+            if (isset($_GET['ssn'])) $str .= "&ssn=".$_GET['ssn'];
             if (isset($_GET['f_name'])) $str .= "&f_name=".$_GET['f_name'];
             if (isset($_GET['m_name'])) $str .= "&m_name=".$_GET['m_name'];
             if (isset($_GET['l_name'])) $str .= "&l_name=".$_GET['l_name'];
-            if (isset($_GET['ssn'])) $str .= "&ssn=".$_GET['ssn'];
+            if (isset($_GET['update'])) $str .= "&update=".$_GET['update'];
             header($str);
         }
         else {
