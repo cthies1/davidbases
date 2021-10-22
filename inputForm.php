@@ -20,12 +20,12 @@
                     $err = $err-100;
                 }
                 if($err>=20){
-                    echo "invalid last name  ";
+                    echo "<p> <font color=red>invalid last name </font> </p>";
                     echo "\n";
                     $err = $err-20;
                 }
                 if($err>=3){
-                    echo "invalid ssn ";
+                    echo "<p> <font color=red>invalid ssn </font> </p>";
                     echo "\n";
                     $err = $err-3;
                 }
