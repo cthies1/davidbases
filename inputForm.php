@@ -42,7 +42,7 @@
 
             $link = "inputPassenger.php?update=".$update;
             ?>
-            <form action="<?php $link ?>"  method="post">
+            <form action="<?php echo $link ?>"  method="post">
                 First Name: <input type="text" name="f_name" value="<?php echo $f_name ?>" /></br></br>
                 <div class ="error" id="firstNameError"></div>
                 Middle Name: <input type="text" name="m_name" value="<?php echo $m_name ?>" /></br></br>
