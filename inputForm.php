@@ -12,19 +12,18 @@
         <p>
             <?php
             if(isset($_GET["error"])){
-                echo ($_GET["error"]);
                 $err = $_GET["error"];
                 
                 if($err >=100){
-                    echo "invalid first name  \n";
+                    echo "invalid first name \r\n";
                     $err = $err-100;
                 }
                 if($err>=20){
-                    echo "invalid last name  \n";
+                    echo "invalid last name  \r\n";
                     $err = $err-20;
                 }
                 if($err>=3){
-                    echo "invalid ssn  \n";
+                    echo "invalid ssn  \r\n";
                     $err = $err-3;
                 }
                 
