@@ -15,21 +15,19 @@
                 $err = $_GET["error"];
                 
                 if($err >=100){
-                    echo "<p> <font color=red>ERROR: Invalid first name :( </font> </p>";
-                    echo "\n";
+                    echo "invalid first name \r\n";
                     $err = $err-100;
                 }
                 if($err>=20){
-                    echo "<p> <font color=red>ERROR: Invalid last name :(</font> </p>";
-                    echo "\n";
+                    echo "invalid last name  \r\n";
                     $err = $err-20;
                 }
                 if($err>=3){
-                    echo "<p> <font color=red>ERROR: Invalid SSN. SSN must be of the form xxx-xx-xxxx.</font> </p>";
-                    echo "\n";
+                    echo "invalid ssn  \r\n";
                     $err = $err-3;
+
                 }
-                
+                 
                 /*
                 if(!(strpos($_GET["error"], '1') == false)){ //fname error
                     echo "invalid first name  \n";

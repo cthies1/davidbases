@@ -1,11 +1,30 @@
+<?php
+/*
+    $db_file = './myDB/airport.db';
+    try {
+        //open connection to the airport database file
+        $db = new PDO('sqlite:' . $db_file);      // <------ Line 13
+        //set errormode to use exceptions
+        $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    }
+    catch(PDOException $e) {
+        die('Exception : '.$e->getMessage());
+    }
+    */
+?>
+
+
 <!DOCTYPE html>
 <html>
-<body>
-<h2>List of all passengers</h2>
-<p>
-    <?php
+    <head>
+        <title> PASSENGERS </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-sacle=1.0">
+    </head>
+    <body>
 
-        //path to the SQLite database file
+        <?php
+         //path to the SQLite database file
         $db_file = './myDB/airport.db';
 
         try {
@@ -31,21 +50,24 @@
         catch(PDOException $e) {
             die('Exception : '.$e->getMessage());
         }
-    ?>
+        ?>
 
-    <table>
-        <tr>
-            <th>SSN</th>
-            <th>First Name</th>
-            <th>Middle Name</th>
-            <th>Last Name</th>
-            <th>Update Link</th>
-        </tr>
-        <tr>
-            <div id =tableEntries></div>
-        </tr>
-    </table>
-
-</p>
-</body>
+        <table>
+            <tr>
+                <th>SSN</th>
+                <th>First Name</th>
+                <th>Middle Name</th>
+                <th>Last Name</th>
+            </tr>
+            <?php while($row1 = fetchArray($result_set)):;?>
+            <tr>
+                <td><?php echo $row1[0];?></td>
+                <td><?php echo $row1[1];?></td>
+                <td><?php echo $row1[2];?></td>
+                <td><?php echo $row1[3];?></td>
+            </tr>
+            <?php endwhile;?>
+        </table>
+    </body>
 </html>
+        
