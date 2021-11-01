@@ -31,12 +31,14 @@
         <h3>Section III: Database Schema</h3>
         <img alt="Schema Diagram" src="./assets/images/schema.png" />
         <ol>
-            <ul><li><b>Relation_Name:</b> description </li></ul>
-            <ul><li><b>Relation_Name:</b> description </li></ul>
-            <ul><li><b>Relation_Name:</b> description </li></ul>
-            <ul><li><b>Relation_Name:</b> description </li></ul>
-            <ul><li><b>Relation_Name:</b> description </li></ul>
-            <ul><li><b>Relation_Name:</b> description </li></ul>
+            <ul><li><b>User:</b> The User relation stores the login information for a user along with their first name, last name, and age. The email they use to log in will be unique to each user. This information will be used to build a secure login and to display user-specific results upon logging in. </li></ul>
+            <ul><li><b>Admin:</b> The Admin relation stores the login information for a member of the admin. The email they use to log in will be unique to each admin. The admin home page will display different information than the user home page. The information in this table will determine which home page to bring them to.            </li></ul>
+            <ul><li><b>Quiz Result:</b> The Quiz Result relation stores the userID of the user that takes a quiz along with their responses to each quiz question. Each user can only be in the relation one time for each quiz; every time they retake the quiz their responses will update. The information stored in this table will be used to calculate the best match for each user based on their similar answers.            </li></ul>
+            <ul><li><b>Quiz:</b> The Quiz relation stores the ID for a quiz, along with a list of all of the questions that are on that quiz. This information will be used to link the question responses in the Quiz Result relation to the actual question asked. </li></ul>
+            <ul><li><b>Match:</b> The Match relation stores the IDs for two users who have matched, the strength of the match, and the date they matched. Users will be able to keep track of their top match as well as previous matches. </li></ul>
+            <ul><li><b>Unmatch:</b> The Unmatch relation stores the IDs for two users who cannot be matched together. This feature will be used to prevent people from matching multiple times, or to prevent reported users from matching with a user that reported them.</li></ul>
+            <ul><li><b>Report:</b> The Report relation stores the ID for a user that has been reported along with the number of times they were reported. If a user is reported 3 times by different people, they will be removed from the database and not allowed to rejoin. </li></ul>
+
         </ol>
 
         <h3>Section IV: Project Management</h3>
