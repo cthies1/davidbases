@@ -14,13 +14,13 @@ body {
 }
 
 .schema {
-  width: 50vw;
+  width: 50%;
   height: auto;
   border: 2px solid black;
 }
 
 .gantt-chart {
-  width: 50vw;
+  width: 500px;
   height: auto;
   border: 2px solid black;
 }
