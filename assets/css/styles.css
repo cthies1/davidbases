@@ -13,7 +13,7 @@ body {
   border: 2px solid black;
 }
 
-.schema {
+/* .schema {
   width: 50%;
   height: auto;
   border: 2px solid black;
@@ -23,7 +23,7 @@ body {
   width: 500px;
   height: auto;
   border: 2px solid black;
-}
+} */
 
 .error {
   font-size: 12pt;
